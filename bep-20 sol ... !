@@ -1,0 +1,14 @@
+{string public name = "Manifest";
+string = "MNF";
+uint256= 21000000000;
+uint8 = 8;
+/***@dev*/0
+_from,_to,uint256_value); 
+/***@dev **/ {onay} ( _owner,_spender,uint256_);
+(adres=> uint256)public balenceOf;
+(adres=> mapping(adres => uit256)) kamu ödeneği;
+/***msg.@dev */yapıcı (){dengeOf[msg.sender]=toplam tedarik ;21000000000} /***@dev,
+{Transfer} (adres_to,uint256_değer) halka açık döner ( bool başarısı)
+{reguire(balanceOf[msg.sender]>=_value);
+dengeOf[msg.sender]-=_değer;
+dengeOf[to]+=_değer;yayan Transfer(msg.sender,_to,_value); true döndür;
