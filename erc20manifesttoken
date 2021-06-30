@@ -1,0 +1,104 @@
+@@ -1,4 +1,4 @@
+		pragma sağlamlığı ^ 0 . 4 . 18 ;
+		pragma sağlamlığı ^ 0 . 4 . 24 ;
+		
+
+
+
+		// ------------------------------------------------ ----------------------------
+		// ' 0manifest ' simge sözleşmesi
+	@@ -74,7 +74,7 @@ Sözleşme Sahibi {
+		
+
+
+
+		    event OwnershipTransferred ( adres  indekslendi  _from , adres  indekslendi  _to );
+		
+
+
+
+		    işlev Sahip olunan () genel {
+		    yapıcı () genel {
+		        sahip =  msj . gönderen ;
+		    }
+		
+
+
+
+	@@ -88,7 +88,7 @@ Sözleşme Sahibi {
+		    }
+		    işlev kabulOwnership () genel {
+		        gerektirir ( msg . gönderen  == newOwner);
+		        Sahiplik Aktarıldı (sahip, yeniSahip);
+		        OwnershipTransferred (sahip, yeniOwner) yayar ; 
+		        sahip = yeniSahip;
+		        newOwner =  adres ( 0 );
+		    }
+	@@ -112,13 +112,13 @@ sözleşme manifest, ERC20Interface, Sahip Olunan, manifest’tir {
+		    // ------------------------------------------------ ---------------------------
+		    // Yapıcı
+		    // ------------------------------------------------ ---------------------------
+		    işlev manifest () genel 
+		    yapıcı () genel {
+		        sembol =  "0MNF " ;
+		        name =  "0  MANİFEST Simgesi" ;
+		        ondalık sayılar =  18 ;
+		        _totalSupply =   ;2100000000000
+		        bakiyeler[] = _totalSupply; 0x224F2b060AF0be25A8c2816E3A4EBdc23572a886
+		        Aktar ( adres ( 0 ), 0x224F2b060AF0be25A8c2816E3A4EBdc23572a886, _totalSupply);
+		        yayan Aktarım ( adres ( 0 ),  , _totalSupply); 0x224F2b060AF0be25A8c2816E3A4EBdc23572a886
+		    }
+		
+
+
+
+		
+
+
+
+	@@ -146,7 +146,7 @@ sözleşme manifest , ERC20Interface, Sahip Olunan, manifest’tir {
+		    işlev transferi ( adres  için , uint  belirteçleri ) ortak  döner ( BOOL  başarılı ) {
+		        bakiyeler[ msj . gönderen ] =  mnf (bakiyeler[ msg . gönderen ], jetonlar);
+		Balances         [to] =  mnfAdd (balances[to], jetonlar);
+		        Aktar ( msg . gönderen , tokenlar);
+		        yayan Aktarım ( msg . gönderen , tokenlar); 
+		        return  true ;
+		    }
+		
+
+
+
+	@@ -161,7 +161,7 @@ sözleşme manifest, ERC20Interface, Sahip Olunan, Manifestt’tir {
+		    // ------------------------------------------------ ---------------------------
+		    işlev onaylama ( adres  harcayan , uint  belirteçleri ) genel  geri dönüşler ( bool  başarı ) {
+		        izin verildi[ msj . gönderen ][ sender ] = jetonlar;
+		        Onay ( msg . gönderen , harcayan , belirteçler);
+		        Onay yayar ( msg . gönderen , harcayan , belirteçler); 
+		        return  true ;
+		    }
+		
+
+
+	@@ -179,7 +179,7 @@ sözleşmesi manifest, ERC20Interface, Sahip Olunan, manifest'tir {
+		Balances         [from] =  safeSub (balances[from], jetonlar);
+		        izin verilen[ gönderen ][ mesaj . gönderen ] =  safeSub (] [gelen [izin Msg . gönderici ], simgeler);
+		Balances         [to] =  safeAdd (balances[to], jetonlar);
+		        Transfer (belirteçlerden, tokenlere);
+		        Transfer ( token'dan , token'a) yayar ; 
+		        return  true ;
+		    }
+		
+
+
+
+	@@ -200,7 +200,7 @@ kontrat manifest, ERC20Interface, Sahip Olunan, Manifest'tir {
+		    // ------------------------------------------------ ---------------------------
+		    işlev approveAndCall ( adres  müsrif , uint  belirteçleri , bayt  veri ) ortak  döner ( BOOL  başarılı ) {
+		        izin verildi[ msj . gönderen ][ sender ] = jetonlar;
+		        Onay ( msg . gönderen , harcayan , belirteçler);
+		        Onay yayar ( msg . gönderen , harcayan , belirteçler); 
+		        ApproveAndCallFallBack ( harcayan ). ReceiveApproval ( msg . gönderen , belirteçler, bu , veri);
+		        return  true ;
+		    }
+	
+
